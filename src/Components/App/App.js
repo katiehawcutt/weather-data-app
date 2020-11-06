@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={(weather !== null) ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <header>{/* <h1 className="page-title">Weather App</h1> */}</header>
       <main>{weather !== null && <Display weather={weather} />}</main>
     </div>

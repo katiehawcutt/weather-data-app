@@ -5,9 +5,9 @@
 h1 {
   margin: 20px;
 }
-.App {
+.app{
   background-color: #264653;
-  background-image: url("warm\ \(1\).png");
+  background-image: url("./cold\ \(1\).png");
   background-repeat: no-repeat;
   background-position: center;
   width: 480px;
@@ -18,3 +18,8 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.app.warm {
+    background-image: url('./warm\ \(1\).png');
+    color:white;
+  }

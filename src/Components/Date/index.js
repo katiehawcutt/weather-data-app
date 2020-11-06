@@ -34,7 +34,7 @@ function DisplayDate() {
   let month = months[date.getMonth()];
   let year = date.getFullYear();
 
-  return <p>{`${day} ${dateNumber} ${month} ${year}`}</p>;
+  return <p className="dateP">{`${day} ${dateNumber} ${month} ${year}`}</p>;
 }
 
 export default DisplayDate;

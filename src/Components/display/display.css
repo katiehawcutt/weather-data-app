@@ -1,9 +1,11 @@
-.display{
-    text-align: center;
+.display {
+  text-align: center;
 }
-.city{
-    color: #e76f51; 
+.city {
+  color: #1d3557;
+  margin: 30px;
+  padding: 50px;
 }
-.weather{
-    color: #f4a261;
+.weather {
+  color: #023e8a;
 }

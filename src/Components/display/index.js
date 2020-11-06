@@ -4,7 +4,9 @@ import DisplayDate from "../Date/index";
 
 function Display({ weather }) {
   return (
-    <div className="display">
+      <div>
+
+<div className="display">
       <h1 className="city">{weather.name}</h1>
       <h2 className="weather">
         {Math.round(weather.main.temp)}
@@ -13,6 +15,8 @@ function Display({ weather }) {
       <DisplayDate />
       <h3 className="weather">{weather.weather[0].description}</h3>
     </div>
+      </div>
+    
   );
 }
 

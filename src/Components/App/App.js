@@ -30,11 +30,17 @@ function App() {
   }, [query]);
 
   return (
-    <div className="App">
+
+    <div className={(weather !== null) ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+     
+     
+
+    
       <main>
         <Input setQuery={setQuery} />
         {weather !== null && <Display weather={weather} />}
       </main>
+
     </div>
   );
 }

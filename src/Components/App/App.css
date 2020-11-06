@@ -1,7 +1,21 @@
 .page-title{
     text-align: center;
     color: #e9c46a;
+    
 }
-html{
+h1{
+    margin:10px;
+}
+.App{
     background-color: #264653;
+    background-image: ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 480px;
+    height: 800px;
+    border-radius: 10px;
+}
+body{
+    display: flex;
+    justify-content: center;
 }

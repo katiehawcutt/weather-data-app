@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Display from "../display";
+
  
 const api = {
   key: "64fb852b810905d928c26726c873e75f",
@@ -7,8 +9,6 @@ const api = {
 };
 //http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}&appid={API key}
 
-import Display from "../display";
-import Button from "../button/index"
 
 
 function App() {
@@ -20,15 +20,12 @@ function App() {
         `${api.base}weather?q=Birmingham&units=metric&APPID=${api.key}`
       );
       const data = await res.json();
-      
+      setWeather(data);      
       console.log(data);
     }
     fetchApi();
-  }, []);
-function getWeather(){
-  setWeather(data);
+  },[]);
 
-}
 
 
   return (
@@ -37,7 +34,6 @@ function getWeather(){
         <h1>Weather App</h1>
       </header>
       <main>
-      <Button getWeather = {getWeather}/>
         <Display weather = {weather}/>
       </main>
     </div>

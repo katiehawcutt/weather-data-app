@@ -17,8 +17,10 @@ function App() {
         `${api.base}weather?q=Birmingham&units=metric&APPID=${api.key}`
       );
       const data = await res.json();
-      setWeather(data);
       console.log(data);
+      if (data) {
+        setWeather(data);
+      }
     }
     fetchApi();
   }, []);

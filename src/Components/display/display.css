@@ -9,3 +9,9 @@
 .weather {
   color: #023e8a;
 }
+
+.cold {
+  color: #f4a261;
+  margin: 30px;
+  padding: 50px;
+}

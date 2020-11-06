@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
- fetch
+ 
 const api = {
   key: "64fb852b810905d928c26726c873e75f",
   base: "http://api.openweathermap.org/data/2.5/",
@@ -11,8 +11,6 @@ import Display from "../display";
 import Button from "../button/index"
 
 
-
-main
 function App() {
   const [weather, setWeather] = useState({});
 
@@ -22,11 +20,16 @@ function App() {
         `${api.base}weather?q=Birmingham&units=metric&APPID=${api.key}`
       );
       const data = await res.json();
-      setWeather(data);
+      
       console.log(data);
     }
     fetchApi();
   }, []);
+function getWeather(){
+  setWeather(data);
+
+}
+
 
   return (
     <div className="App">
@@ -34,7 +37,7 @@ function App() {
         <h1>Weather App</h1>
       </header>
       <main>
-        <Button getWeather = {getWeather}/>
+      <Button getWeather = {getWeather}/>
         <Display weather = {weather}/>
       </main>
     </div>

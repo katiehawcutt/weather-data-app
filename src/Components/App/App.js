@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Display from "../display";
-import Input from "../Input/index"
+import Input from "../Input/index";
 
 const api = {
   key: "64fb852b810905d928c26726c873e75f",
@@ -11,11 +11,9 @@ const api = {
 
 function App() {
   const [weather, setWeather] = useState(null);
-  const [ query,setQuery] = useState(null);
+  const [query, setQuery] = useState(null);
 
-  
-    useEffect(() => {
-
+  useEffect(() => {
     async function fetchApi() {
       const res = await fetch(
         `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
@@ -27,22 +25,16 @@ function App() {
       }
     }
     if (query !== null) {
-      fetchApi(); }
+      fetchApi();
+    }
   }, [query]);
-   
-  
+
   return (
     <div className="App">
-
-      <header>
-        <h1 className="page-title">Weather App</h1>
-      </header>
       <main>
-        <Input setQuery = {setQuery} />
-        {weather !== null && <Display weather={weather} />}</main>
-
-      
-      
+        <Input setQuery={setQuery} />
+        {weather !== null && <Display weather={weather} />}
+      </main>
     </div>
   );
 }

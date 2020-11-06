@@ -2,20 +2,18 @@ import React from "react";
 import "./display.css";
 import DisplayDate from "../Date/index";
 
-
-function Display({weather}){
-    
-return(
-    <div className = "display">
-         <h1 className="city">{weather.name}</h1>
-        <h2 className="weather">{weather.main.temp}{" °C"}</h2>
-        <img/>
-        <DisplayDate />
-        <h3 className="weather">{weather.weather[0].description}</h3> 
-        </div>
-    )
+function Display({ weather }) {
+  return (
+    <div className="display">
+      <h1 className="city">{weather.name}</h1>
+      <h2 className="weather">
+        {Math.round(weather.main.temp)}
+        {" °C"}
+      </h2>
+      <DisplayDate />
+      <h3 className="weather">{weather.weather[0].description}</h3>
+    </div>
+  );
 }
-
-
 
 export default Display;

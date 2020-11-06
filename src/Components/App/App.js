@@ -33,12 +33,16 @@ function App() {
   
   return (
     <div className="App">
+
       <header>
         <h1 className="page-title">Weather App</h1>
       </header>
       <main>
         <Input setQuery = {setQuery} />
         {weather !== null && <Display weather={weather} />}</main>
+
+      
+      
     </div>
   );
 }

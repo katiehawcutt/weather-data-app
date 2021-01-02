@@ -5,6 +5,8 @@
 
 #### School of Code Bootcamp - Hackathon Week 7
 
+###### November 2020
+
 _For this one day hackathon our brief was to create a web experience using data from an API. This was our first time working remotely in a group of four (until this point we'd just been working in pairs). In my team we decided to use a weather API to make a weather forecast app in which you type in the location and get given the current weather._
 
 ### Main Learning Points:

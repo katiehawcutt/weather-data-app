@@ -7,7 +7,6 @@ const api = {
   key: "64fb852b810905d928c26726c873e75f",
   base: "http://api.openweathermap.org/data/2.5/",
 };
-//http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}&appid={API key}
 
 function App() {
   const [weather, setWeather] = useState(null);

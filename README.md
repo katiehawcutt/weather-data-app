@@ -1,19 +1,19 @@
-# Hackathon Week 7
+# Weather Forecast App
 
-For todays hackathon we will be creating a web experience using data from an api - in groups of 4! This will be hard, in 4s, so use all the tools you’ve learned, and you will understand better how to overcome some problems before the project next week.
+![Weather forecast app - cold screen](./public/Images/weatherAppCold.PNG)
+![Weather forecast app - warm screen](./public/Images/weatherAppWarm.PNG)
 
-## Task 1 - Api Research (20 - 30 mins)
+#### School of Code Bootcamp - Hackathon Week 7
 
-Research what apis are available. You can use [this](https://apilist.fun) to help, but also go and explore. You can always fall back on pokemon/starwars/quiz/dad-jokes if needs be.
+_For this one day hackathon our brief was to create a web experience using data from an API. This was our first time working remotely in a group of four (until this point we'd just been working in pairs). In my team we decided to use a weather API to make a weather forecast app in which you type in the location and get given the current weather._
 
-## Task 2 - Ideate and Plan (30 - 60 mins)
+### Main Learning Points:
 
-Use disney ideation to come up with an idea of what you want to build in the day. Then decide what your MVP is, and make it so that you can achieve your MVP before lunch. Break down your idea into its component parts. And prioritise your tasks.
-
-## Task 3 - Build your MVP (60 - 180 mins)
-
-Build your MVP. Use branching and work on different components concurrently. Have the most simple essence of your app working before lunch.
-
-## Task 4 - Stretch Goals (rest of the day)
-
-Have a quick chat about what you are going to build next. Break it down into tasks that you can work on and build it!
+- We used Disney Ideation to come up with our idea for the hackathon and worked through the Dreamer, Realist and Critic phases together
+- We decided on an MVP which could be achieved by lunchtime and then set some stretch goals which we could work on in the afternoon
+- We used Trello to make a Kanban board
+- We broke down our idea in component parts ad prioritised our tasks
+- We used conditional rendering to only render the Display component to the page if the weather had been set
+- We used the ternary operator to toggle the background image between 'cold' and 'warm' depending on the temperature of the location searched - anything about 16ºC was 'warm'
+- We made a Date component and wrote a function which formatted the date we got back from the Date Object in the way we wanted it
+- We got really good at branching and merging on GitHub!

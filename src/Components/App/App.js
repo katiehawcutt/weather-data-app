@@ -4,7 +4,7 @@ import Display from "../display";
 import Input from "../Input/index";
 
 const api = {
-  key: "64fb852b810905d928c26726c873e75f",
+  key: process.env.REACT_APP_API_KEY,
   base: "http://api.openweathermap.org/data/2.5/",
 };
 

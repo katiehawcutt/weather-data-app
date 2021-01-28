@@ -1,11 +1,31 @@
 input {
   border-radius: 10px;
   margin-top: 40px;
+  border: none;
+  height: 30px;
+  font-family: var(--primary-font);
+  text-align: center;
 }
 
 button {
   border-radius: 10px;
   margin: 20px;
+  border: none;
+  height: 25px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 20px;
+  background-color: darkcyan;
+  border: white 2px solid;
+  transition: 0.5s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: indianred;
 }
 
 .input-container {
@@ -13,4 +33,5 @@ button {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  margin-top: 0;
 }

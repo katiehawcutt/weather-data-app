@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Display from "../display";
-import Input from "../Input/index";
+import Display from "../Display";
+import Input from "../Input";
+import ErrorMessage from "../ErrorMessage";
 
 const api = {
   key: process.env.REACT_APP_API_KEY,
@@ -11,20 +12,27 @@ const api = {
 function App() {
   const [weather, setWeather] = useState(null);
   const [query, setQuery] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchApi() {
-      const res = await fetch(
-        `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
-      );
-      const data = await res.json();
-      console.log(data);
-      if (data) {
-        setWeather(data);
+    if (query !== "") {
+      async function fetchApi() {
+        const res = await fetch(
+          `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
+        );
+        if (res.status >= 200 && res.status <= 299) {
+          const data = await res.json();
+          console.log(data);
+          if (data) {
+            setWeather(data);
+          }
+        } else {
+          setError(res.status);
+        }
       }
-    }
-    if (query !== null) {
-      fetchApi();
+      if (query !== null) {
+        fetchApi();
+      }
     }
   }, [query]);
 
@@ -34,10 +42,9 @@ function App() {
         weather !== null ? (weather.main.temp > 16 ? "app warm" : "app") : "app"
       }
     >
-      <main>
-        <Input setQuery={setQuery} />
-        {weather !== null && <Display weather={weather} />}
-      </main>
+      <Input setQuery={setQuery} setError={setError} />
+      {weather !== null && error === null && <Display weather={weather} />}
+      {error !== null && <ErrorMessage />}
     </div>
   );
 }

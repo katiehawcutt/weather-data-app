@@ -3,6 +3,7 @@ import "./App.css";
 import Display from "../Display";
 import Input from "../Input";
 import ErrorMessage from "../ErrorMessage";
+import PromptMessage from "../PromptMessage";
 
 const api = {
   key: process.env.REACT_APP_API_KEY,
@@ -33,6 +34,8 @@ function App() {
       if (query !== null) {
         fetchApi();
       }
+    } else {
+      setWeather(null);
     }
   }, [query]);
 
@@ -44,6 +47,7 @@ function App() {
     >
       <Input setQuery={setQuery} setError={setError} />
       {weather !== null && error === null && <Display weather={weather} />}
+      {query === "" && error === null && <PromptMessage />}
       {error !== null && <ErrorMessage />}
     </div>
   );

@@ -1,7 +1,6 @@
 # Weather Data App
 
-![Weather app - cold screen](./public/Images/weatherCold.png)
-![Weather app - warm screen](./public/Images/weatherHot.png)
+![Weather app screen views](./public/Images/weatherAppViews.png)
 
 #### School of Code Bootcamp - Hackathon Week 7
 

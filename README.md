@@ -48,7 +48,7 @@ Download and install npm modules. Add .env file for local usage. You will need t
 
 1.  Clone the repo
 
-`git clone https://github.com/katiehawcutt/weather-forecast-app.git`
+`git clone https://github.com/katiehawcutt/weather-data-app.git`
 
 2. Install the required npm modules
 
